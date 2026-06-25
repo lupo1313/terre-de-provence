@@ -93,15 +93,112 @@ els.forEach((el) => io.observe(el));
   const open = 7 * 60;        // 07:00
   const close = 20 * 60 + 30; // 20:30
 
-  if (minutes >= open && minutes < close) {
+  const isOpen = minutes >= open && minutes < close;
+  const statusInfos = document.getElementById("openStatusInfos");
+  const dotInfos = document.getElementById("openDotInfos");
+
+  if (isOpen) {
     status.textContent = "Ouvert maintenant · jusqu'à 20h30";
     dot.classList.add("dot--open");
+    if (statusInfos) statusInfos.textContent = "Ouvert maintenant";
+    if (dotInfos) dotInfos.classList.add("dot--open");
   } else {
     status.textContent = "Fermé · ouvre à 7h00";
     dot.classList.remove("dot--open");
     dot.classList.add("dot--closed");
+    if (statusInfos) statusInfos.textContent = "Fermé · ouvre à 7h00";
+    if (dotInfos) dotInfos.classList.add("dot--closed");
   }
 })();
+
+/* ---------- Cartes de saison : tap pour voir l'autre image (mobile) ---------- */
+document.querySelectorAll(".prod").forEach((card) => {
+  if (card.querySelector(".prod__imghover")) {
+    card.addEventListener("click", () => card.classList.toggle("is-swapped"));
+  }
+});
+
+/* ---------- Galeries photos « swipe » (Côté primeur / Côté épicerie) ---------- */
+const GALLERIES = {
+  primeur: [
+    "images/primeur.jpg", "images/fraises.jpg", "images/tomates.jpg",
+    "images/agrumes.jpg", "images/legumes.jpg", "images/cerises.jpg", "images/peches.jpg"
+  ],
+  epicerie: [
+    "images/epicerie.jpg", "images/epicerie-2.jpg", "images/epicerie-3.jpg",
+    "images/epicerie-4.jpg", "images/epicerie-5.jpg", "images/olives.jpg"
+  ]
+};
+
+function initGallery(host, imgs) {
+  const track = document.createElement("div");
+  track.className = "gallery__track";
+  imgs.forEach((src) => {
+    const slide = document.createElement("div");
+    slide.className = "gallery__slide";
+    const im = new Image();
+    im.onload = () => { slide.style.backgroundImage = `url("${src}")`; };
+    im.src = src;
+    track.appendChild(slide);
+  });
+
+  const prev = document.createElement("button");
+  prev.className = "gallery__nav gallery__nav--prev";
+  prev.type = "button"; prev.setAttribute("aria-label", "Photo précédente"); prev.innerHTML = "‹";
+  const next = document.createElement("button");
+  next.className = "gallery__nav gallery__nav--next";
+  next.type = "button"; next.setAttribute("aria-label", "Photo suivante"); next.innerHTML = "›";
+
+  const dots = document.createElement("div");
+  dots.className = "gallery__dots";
+  imgs.forEach((_, i) => {
+    const d = document.createElement("button");
+    d.type = "button"; d.className = "gallery__dot";
+    d.setAttribute("aria-label", "Photo " + (i + 1));
+    d.addEventListener("click", (e) => { e.stopPropagation(); go(i); });
+    dots.appendChild(d);
+  });
+
+  host.append(track, prev, next, dots);
+
+  let idx = 0;
+  function update() {
+    track.style.transform = `translateX(${-idx * 100}%)`;
+    dots.querySelectorAll(".gallery__dot").forEach((d, i) => d.classList.toggle("is-active", i === idx));
+  }
+  function go(i) { idx = (i + imgs.length) % imgs.length; update(); }
+  prev.addEventListener("click", (e) => { e.stopPropagation(); go(idx - 1); });
+  next.addEventListener("click", (e) => { e.stopPropagation(); go(idx + 1); });
+  update();
+
+  // Swipe (souris + tactile via Pointer Events)
+  let startX = 0, dx = 0, dragging = false;
+  host.addEventListener("pointerdown", (e) => {
+    dragging = true; startX = e.clientX; dx = 0;
+    track.style.transition = "none";
+    try { host.setPointerCapture(e.pointerId); } catch (_) {}
+  });
+  host.addEventListener("pointermove", (e) => {
+    if (!dragging) return;
+    dx = e.clientX - startX;
+    track.style.transform = `translateX(calc(${-idx * 100}% + ${dx}px))`;
+  });
+  function endDrag() {
+    if (!dragging) return;
+    dragging = false;
+    track.style.transition = "";
+    if (Math.abs(dx) > 45) go(idx + (dx < 0 ? 1 : -1));
+    else update();
+  }
+  host.addEventListener("pointerup", endDrag);
+  host.addEventListener("pointercancel", endDrag);
+  host.addEventListener("pointerleave", endDrag);
+}
+
+document.querySelectorAll("[data-gallery]").forEach((host) => {
+  const imgs = GALLERIES[host.getAttribute("data-gallery")];
+  if (imgs && imgs.length) initGallery(host, imgs);
+});
 
 /* ---------- Année footer ---------- */
 const yearEl = document.getElementById("year");
