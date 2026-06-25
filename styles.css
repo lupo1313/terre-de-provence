@@ -5,17 +5,20 @@
 
 :root{
   /* Palette terre / olive / ocre / crème */
-  --cream:      #faf6ee;
-  --cream-2:    #f3ece0;
-  --sand:       #efe6d6;
-  --ink:        #2a2418;
-  --ink-soft:   #5c5240;
-  --olive:      #5b6b3a;
-  --olive-deep: #3f4b28;
-  --terracotta: #c2552f;
-  --terracotta-2:#a8451f;
-  --ocre:       #d89a3f;
-  --berry:      #8a2b3a;
+  --cream:      #fbf6e7;
+  --cream-2:    #f4ead6;
+  --sand:       #f1e6d0;
+  --ink:        #2b2a1d;
+  --ink-soft:   #5f5746;
+  --olive:      #5f8a37;   /* vert feuille frais (primaire) */
+  --olive-deep: #3c5a23;   /* vert profond (footer / ticker) */
+  --terracotta: #dd4f2a;   /* rouge tomate (CTA) */
+  --terracotta-2:#c03e1d;
+  --ocre:       #eba62b;   /* jaune doré (agrumes / olives) */
+  --berry:      #9e2f54;   /* prune / aubergine */
+  --leaf:       #7fb03f;   /* vert vif (accent) */
+  --sun:        #f3b733;   /* jaune soleil (accent) */
+  --plum:       #7e3a6b;   /* prune violet (accent) */
 
   --radius:     20px;
   --radius-sm:  12px;
@@ -123,14 +126,15 @@ section{ position:relative; }
 }
 .brand{ display:flex; align-items:center; gap:.7rem; }
 .brand__mark{
-  font-family:var(--serif); font-weight:600; font-size:1rem;
-  width:42px; height:42px; border-radius:12px;
-  background:var(--olive-deep); color:var(--cream);
-  display:flex; align-items:center; justify-content:center; letter-spacing:.02em;
-  white-space:nowrap; line-height:1;
-  transition:background .4s;
+  width:44px; height:44px; border-radius:12px; flex:0 0 auto;
+  background-color:#fbf6e3;
+  background-image:url('images/logo.jpg');
+  background-repeat:no-repeat;
+  background-size:120px;
+  background-position:-39px -23px;
+  box-shadow:0 2px 10px rgba(42,36,24,.18);
 }
-.brand__mark--lg{ width:54px; height:54px; font-size:1.3rem; border-radius:14px; }
+.brand__mark--lg{ width:56px; height:56px; border-radius:14px; background-size:153px; background-position:-50px -29px; }
 .brand__dot{ color:var(--ocre); }
 .brand__name{
   font-family:var(--serif); font-weight:500; font-size:1.18rem;
@@ -138,7 +142,6 @@ section{ position:relative; }
   transition:color .4s;
 }
 .nav:not(.is-scrolled) .brand__name{ color:#fff; }
-.nav:not(.is-scrolled) .brand__mark{ background:rgba(255,255,255,.16); color:#fff; backdrop-filter:blur(4px); }
 
 .nav__links{ display:flex; gap:2rem; }
 .nav__links a{
@@ -465,9 +468,9 @@ section{ position:relative; }
   align-items:center; justify-content:center; margin-bottom:16px;
 }
 .perk:nth-child(1){ --c:var(--ocre); }
-.perk:nth-child(2){ --c:var(--olive); }
+.perk:nth-child(2){ --c:var(--leaf); }
 .perk:nth-child(3){ --c:var(--terracotta); }
-.perk:nth-child(4){ --c:var(--berry); }
+.perk:nth-child(4){ --c:var(--plum); }
 .perk h3{ font-family:var(--serif); font-weight:500; font-size:1.18rem; margin-bottom:.35rem; line-height:1.15; }
 .perk p{ color:var(--ink-soft); font-size:.9rem; }
 
