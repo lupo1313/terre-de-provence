@@ -125,16 +125,11 @@ section{ position:relative; }
   display:flex; align-items:center; justify-content:space-between; gap:1rem;
 }
 .brand{ display:flex; align-items:center; gap:.7rem; }
-.brand__mark{
-  width:44px; height:44px; border-radius:12px; flex:0 0 auto;
-  background-color:#fbf6e3;
-  background-image:url('images/logo.jpg');
-  background-repeat:no-repeat;
-  background-size:120px;
-  background-position:-39px -23px;
-  box-shadow:0 2px 10px rgba(42,36,24,.18);
-}
-.brand__mark--lg{ width:56px; height:56px; border-radius:14px; background-size:153px; background-position:-50px -29px; }
+.brand__sprig{ width:30px; height:30px; flex:0 0 auto; color:var(--olive); transition:color .4s; }
+.brand__sprig .olive{ fill:var(--ocre); }
+.brand__sprig--lg{ width:44px; height:44px; }
+.nav:not(.is-scrolled) .brand__sprig{ color:#d6e7b2; }
+.footer__brand .brand__sprig{ color:#cfe0ad; }
 .brand__dot{ color:var(--ocre); }
 .brand__name{
   font-family:var(--serif); font-weight:500; font-size:1.18rem;
