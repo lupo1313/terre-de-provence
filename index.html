@@ -3,29 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terre de Provence — Primeur & Épicerie fine | Endoume, Marseille 7e</title>
-  <meta name="description" content="Terre de Provence, votre primeur et épicerie fine au cœur d'Endoume, 26 rue d'Endoume, Marseille 7e. Fruits et légumes gorgés de soleil, produits de saison, ouvert 7j/7 de 7h à 20h30." />
+  <title>Terre de Provence — Primeur & épicerie fine à Endoume, Marseille 7ᵉ</title>
+  <meta name="description" content="Primeur et épicerie fine au cœur d'Endoume — Saint-Victor, Marseille 7ᵉ. Fruits et légumes de saison gorgés de soleil, choisis chaque matin chez les producteurs de la région. 26 rue d'Endoume, ouvert 7j/7 de 7h à 20h30." />
+  <meta name="theme-color" content="#FBF6EC" />
 
-  <!-- SEO local -->
-  <meta property="og:title" content="Terre de Provence — Primeur & Épicerie fine à Endoume" />
-  <meta property="og:description" content="Fruits et légumes de saison, gorgés de soleil. Au cœur du quartier d'Endoume, Marseille 7e. Ouvert 7j/7." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Terre de Provence — Primeur & épicerie fine à Endoume" />
+  <meta property="og:description" content="Fruits et légumes de saison, gorgés de soleil. Au cœur du quartier d'Endoume, Marseille 7ᵉ. Producteurs locaux, circuit court, ouvert 7j/7." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="images/hero.jpg" />
+
+  <link rel="icon" href="images/logo.jpg" />
+  <link rel="apple-touch-icon" href="images/logo.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+  <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Données structurées pour Google (référencement local) -->
+  <!-- Référencement local -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "GroceryStore",
     "name": "Terre de Provence",
-    "image": "",
-    "description": "Primeur et épicerie fine au cœur du quartier d'Endoume. Fruits et légumes de saison, gorgés de soleil.",
+    "image": "images/hero.jpg",
+    "description": "Primeur et épicerie fine au cœur du quartier d'Endoume — Saint-Victor. Fruits et légumes de saison, gorgés de soleil, en circuit court.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "26 rue d'Endoume",
@@ -34,40 +40,39 @@
       "addressRegion": "Provence-Alpes-Côte d'Azur",
       "addressCountry": "FR"
     },
+    "geo": { "@type": "GeoCoordinates", "latitude": 43.2862, "longitude": 5.3565 },
     "telephone": "+33491338568",
+    "priceRange": "€€",
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "07:00",
       "closes": "20:30"
-    }]
+    }],
+    "hasMap": "https://www.google.com/maps?q=26+rue+d%27Endoume+13007+Marseille"
   }
   </script>
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ===================== NAV ===================== -->
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#hero" class="brand" aria-label="Terre de Provence — accueil">
-        <svg class="brand__basket" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <path d="M12 20a8 8 0 0 1 16 0" stroke="#b07d2f" stroke-width="2"/>
-          <circle cx="14" cy="17.4" r="3.6" fill="#d8492f"/>
-          <circle cx="26" cy="17.4" r="3.9" fill="#ef9a1e"/>
-          <circle cx="20" cy="16.2" r="3.2" fill="#7fae3f"/>
-          <path d="M20 12.8c.8-2 3-2.4 4.2-1.7-.6 2-2.8 2.5-4.2 1.7Z" fill="#6a9a3a"/>
-          <rect x="6.5" y="19" width="27" height="3.7" rx="1.85" fill="#b07d2f"/>
-          <path d="M8.6 22.7h22.8l-1.8 8.9a2.2 2.2 0 0 1-2.16 1.76H12.56a2.2 2.2 0 0 1-2.16-1.76L8.6 22.7Z" fill="#cf9a4e"/>
-          <path d="M14.6 24.2l-.4 6.5M20 24.2v6.7M25.4 24.2l.4 6.5" stroke="#a06f28" stroke-width="1" opacity=".5"/>
-          <path d="M11.4 27.6h17.2" stroke="#a06f28" stroke-width="1" opacity=".4"/>
-        </svg>
-        <span class="brand__name">Terre de Pr<svg class="brand__cit" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="11" r="7.4" fill="#ef9a1e"/><path d="M10 4.2c.5-2 2.3-2.7 3.8-2.1-.3 1.8-2 2.7-3.8 2.1Z" fill="#6a9a3a"/><circle cx="7.5" cy="8.8" r="1.5" fill="#fff" opacity=".4"/></svg><span class="sr-only">o</span>vence</span>
+        <img class="brand__mark" src="images/logo.jpg" width="48" height="48" alt="" />
+        <span class="brand__text">
+          <span class="brand__name">Terre de Provence</span>
+          <span class="brand__tag">Primeur &amp; épicerie fine · Endoume</span>
+        </span>
       </a>
-      <nav class="nav__links">
+      <nav class="nav__links" aria-label="Navigation principale">
         <a href="#saison">De saison</a>
-        <a href="#univers">La maison</a>
-        <a href="#lieu">Le lieu</a>
-        <a href="#infos">Nous trouver</a>
+        <a href="#valeurs">La maison</a>
+        <a href="#producteurs">Producteurs</a>
+        <a href="#avis">Avis</a>
+        <a href="#magasin">Nous trouver</a>
       </nav>
       <a href="tel:+33491338568" class="nav__cta">
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
@@ -76,313 +81,384 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="hero__media" data-img="market"></div>
-    <div class="hero__veil"></div>
-    <div class="hero__content">
-      <p class="eyebrow eyebrow--light">Primeur &amp; Épicerie fine · Endoume, Marseille 7<sup>e</sup></p>
-      <h1 class="hero__title">Le bon goût du<br><em>Sud</em>, chaque matin.</h1>
-      <p class="hero__sub">Fruits et légumes gorgés de soleil, arrivés chaque matin et choisis directement chez les producteurs de la région. Une adresse de quartier qui prend le temps de bien faire depuis plus de 15 ans.</p>
-      <div class="hero__actions">
-        <a href="#infos" class="btn btn--primary">Venir nous voir</a>
-        <a href="tel:+33491338568" class="btn btn--ghost">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
-          Appeler la boutique
-        </a>
-      </div>
-      <div class="hero__badge">
-        <span class="dot dot--open" id="openDot"></span>
-        <span id="openStatus">Ouvert aujourd'hui · 7h – 20h30</span>
-      </div>
-    </div>
-  </section>
+  <main id="contenu">
 
-  <!-- ===== BANDEAU DEFILANT ===== -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span>Fraises de Carpentras</span><span>•</span>
-      <span>Cerises</span><span>•</span>
-      <span>Pêches &amp; abricots</span><span>•</span>
-      <span>Tomates de plein champ</span><span>•</span>
-      <span>Melon de Provence</span><span>•</span>
-      <span>Huile d'olive AOP</span><span>•</span>
-      <span>Fromages affinés</span><span>•</span>
-      <span>Fraises de Carpentras</span><span>•</span>
-      <span>Cerises</span><span>•</span>
-      <span>Pêches &amp; abricots</span><span>•</span>
-      <span>Tomates de plein champ</span><span>•</span>
-      <span>Melon de Provence</span><span>•</span>
-      <span>Huile d'olive AOP</span><span>•</span>
-      <span>Fromages affinés</span><span>•</span>
-    </div>
-  </div>
-
-  <!-- ===== BANDE AVANTAGES ===== -->
-  <section class="perks" id="perks">
-    <div class="perks__grid">
-      <div class="perk">
-        <span class="perk__ico">
-          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 1 5 5 5 5 0 0 1-2 4l1 9-4-2.4L8 20l1-9a5 5 0 0 1-2-4 5 5 0 0 1 5-5Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
-        </span>
-        <h3>+15 ans d'expérience</h3>
-        <p>Une maison de confiance, au cœur d'Endoume.</p>
-      </div>
-      <div class="perk">
-        <span class="perk__ico">
-          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 3c4 0 7 2 7 6 0 4-3 7-7 9-4-2-7-5-7-9 0-4 3-6 7-6Zm0 3c-1.3 1.6-2 3.3-2 5 0 1.2.4 2.3 1 3.3V9h2v8.3c.6-1 1-2.1 1-3.3 0-1.7-.7-3.4-2-5Z"/></svg>
-        </span>
-        <h3>Producteurs locaux</h3>
-        <p>Circuit court, au plus près des récoltes.</p>
-      </div>
-      <div class="perk">
-        <span class="perk__ico">
-          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M3 5h11a1 1 0 0 1 1 1v8h2.6l2.4-3.2V14h.5a.5.5 0 0 1 .5.5V17h-2.1a2.5 2.5 0 0 1-4.8 0H9.9a2.5 2.5 0 0 1-4.8 0H3V5Zm4 11.5A.5.5 0 1 0 7 17a.5.5 0 0 0 0-1Zm9 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Z"/></svg>
-        </span>
-        <h3>Livraison à domicile</h3>
-        <p>Pas le temps de passer ? On vient à vous sur Marseille.</p>
-      </div>
-      <div class="perk">
-        <span class="perk__ico">
-          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M5 8h14l-1 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 8Zm3 0a4 4 0 0 1 8 0h-2a2 2 0 0 0-4 0H8Z"/></svg>
-        </span>
-        <h3>Primeur &amp; épicerie fine</h3>
-        <p>Le frais et les belles choses, au même endroit.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== DE SAISON ===== -->
-  <section class="saison" id="saison">
-    <div class="section__head">
-      <p class="eyebrow">Ce qu'on aime en ce moment</p>
-      <h2 class="section__title">Les stars de la saison</h2>
-      <p class="section__lead">En juin, l'étal se pare de couleurs. Voici ce qu'on vous conseille les yeux fermés, cueilli à maturité et choisi le matin même.</p>
-    </div>
-
-    <div class="saison__grid">
-      <article class="prod prod--tall prod--fav">
-        <span class="prod__heart" aria-hidden="true" title="Notre coup de cœur">
-          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 21s-6.7-4.35-9.3-8.04C.86 10.2 1.7 6.6 5.1 6.04c2-.33 3.6 1 3.9 1.96.3-.96 1.9-2.29 3.9-1.96 3.4.56 4.24 4.16 2.4 6.92C18.7 16.65 12 21 12 21Z"/></svg>
-        </span>
-        <div class="prod__img" data-img="fraises"></div>
-        <div class="prod__body">
-          <h3>Fraises &amp; cerises</h3>
-          <p>Sucrées, parfumées, le vrai goût du début d'été. À déguster nature ou sur une tarte maison.</p>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <img class="hero__img" src="images/hero.jpg" alt="Devanture de Terre de Provence, primeur à Endoume : étals colorés de fruits et légumes sous l'auvent vert du magasin Fruits et légumes Saint-Victor." fetchpriority="high" />
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="eyebrow eyebrow--light">Primeur &amp; épicerie fine · Endoume — Saint-Victor, Marseille 7<sup>e</sup></p>
+        <h1 class="hero__title">Le bon goût du <em>Sud</em>,<br>chaque matin.</h1>
+        <p class="hero__sub">Fruits et légumes gorgés de soleil, choisis chaque matin chez les producteurs de la région. Une adresse de quartier qui prend le temps de bien faire, depuis plus de quinze ans.</p>
+        <div class="hero__actions">
+          <a href="#magasin" class="btn btn--primary">Venir nous voir</a>
+          <a href="tel:+33491338568" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
+            Appeler la boutique
+          </a>
         </div>
-      </article>
-
-      <article class="prod">
-        <div class="prod__img" data-img="peches"></div>
-        <div class="prod__body">
-          <h3>Pêches &amp; abricots</h3>
-          <p>Juteux et fondants, l'essence de juillet en avance.</p>
+        <div class="hero__badge">
+          <span class="dot" id="openDot" aria-hidden="true"></span>
+          <span id="openStatus">Ouvert aujourd'hui · 7h – 20h30</span>
         </div>
-      </article>
+      </div>
+      <a href="#valeurs" class="hero__scroll" aria-label="Découvrir">
+        <span></span>
+      </a>
+    </section>
 
-      <article class="prod">
-        <div class="prod__img" data-img="tomates"></div>
-        <div class="prod__body">
-          <h3>Tomates de plein champ</h3>
-          <p>Anciennes, charnues, gorgées de soleil. Un filet d'huile d'olive et c'est l'été.</p>
-        </div>
-      </article>
-
-      <article class="prod prod--wide">
-        <div class="prod__img" data-img="legumes"></div>
-        <div class="prod__body">
-          <h3>Le panier du marché</h3>
-          <p>Courgettes, aubergines, poivrons, herbes fraîches. Tout pour une ratatouille comme à la maison.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===== DEUX UNIVERS : PRIMEUR + EPICERIE FINE ===== -->
-  <section class="duo" id="univers">
-    <div class="section__head">
-      <p class="eyebrow">La maison</p>
-      <h2 class="section__title">Deux univers, un même soin</h2>
-      <p class="section__lead">Le meilleur du frais et les belles choses de l'épicerie fine, réunis sous le même toit.</p>
+    <!-- ===================== BANDEAU SAISON ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Fraises de Carpentras</span><span class="marquee__dot"></span>
+        <span>Cerises du Ventoux</span><span class="marquee__dot"></span>
+        <span>Pêches &amp; abricots</span><span class="marquee__dot"></span>
+        <span>Tomates de plein champ</span><span class="marquee__dot"></span>
+        <span>Melon de Provence</span><span class="marquee__dot"></span>
+        <span>Huile d'olive AOP</span><span class="marquee__dot"></span>
+        <span>Olives marinées</span><span class="marquee__dot"></span>
+        <span>Fraises de Carpentras</span><span class="marquee__dot"></span>
+        <span>Cerises du Ventoux</span><span class="marquee__dot"></span>
+        <span>Pêches &amp; abricots</span><span class="marquee__dot"></span>
+        <span>Tomates de plein champ</span><span class="marquee__dot"></span>
+        <span>Melon de Provence</span><span class="marquee__dot"></span>
+        <span>Huile d'olive AOP</span><span class="marquee__dot"></span>
+        <span>Olives marinées</span><span class="marquee__dot"></span>
+      </div>
     </div>
 
-    <div class="duo__grid">
-      <article class="duo__card">
-        <div class="duo__gallery" data-gallery="primeur" aria-label="Photos du rayon primeur"><span class="duo__chip">Côté primeur</span></div>
-        <div class="duo__body">
-          <h3>Le frais, d'abord.</h3>
-          <p>Chaque saison a ses trésors et nous les suivons au plus près. Des variétés qui se succèdent au fil des mois, choisies pour leur goût avant tout : ici, on respecte le rythme des récoltes.</p>
-          <ul class="ticklist">
-            <li>Arrivages renouvelés chaque matin</li>
-            <li>Producteurs de la région privilégiés</li>
-            <li>Conseils de saison et de préparation</li>
+    <!-- ===================== VALEURS (BENTO) ===================== -->
+    <section class="values" id="valeurs">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Ce qui nous tient à cœur</p>
+          <h2 class="section__title">Une certaine idée du bien manger</h2>
+          <p class="section__lead">Pas de superflu, pas de promesses en l'air. Juste des produits choisis avec soin et une façon de faire qu'on n'a jamais voulu changer.</p>
+        </header>
+
+        <div class="bento">
+          <article class="bento__tile v-circuit" data-reveal>
+            <span class="tile__ico">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 3c4 0 7 2 7 6 0 4-3 7-7 9-4-2-7-5-7-9 0-4 3-6 7-6Zm0 3c-1.3 1.6-2 3.3-2 5 0 1.2.4 2.3 1 3.3V9h2v8.3c.6-1 1-2.1 1-3.3 0-1.7-.7-3.4-2-5Z"/></svg>
+            </span>
+            <h3>Le circuit court, vraiment</h3>
+            <p>On travaille avec des producteurs de la région, au plus près des récoltes. Le moins d'intermédiaires possible, pour que vous y gagniez en fraîcheur et en goût.</p>
+          </article>
+
+          <div class="bento__tile bento__tile--photo v-photo" data-reveal>
+            <img src="images/lieu.jpg" loading="lazy" alt="Étal intérieur débordant de citrons, oranges, ananas et avocats chez Terre de Provence." />
+            <span class="tile__chip">Au fil des saisons</span>
+          </div>
+
+          <article class="bento__tile v-selection" data-reveal>
+            <span class="tile__ico">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a1 1 0 0 1 1 1v1.06A8 8 0 0 1 20 12a1 1 0 1 1-2 0 6 6 0 1 0-6 6 1 1 0 1 1 0 2 8 8 0 0 1-1-15.94V3a1 1 0 0 1 1-1Zm5.7 3.3 1.4 1.4-2.1 2.12-1.42-1.42L17.7 5.3ZM11 7h2v5.4l3.1 1.8-1 1.7L11 13.5V7Z"/></svg>
+            </span>
+            <h3>Choisis le matin même</h3>
+            <p>Chaque jour, les étals se renouvellent. On goûte, on trie, on garde le meilleur. Ce qui n'est pas à la hauteur ne finit pas sur nos cagettes.</p>
+          </article>
+
+          <article class="bento__tile v-saison" data-reveal>
+            <span class="tile__ico">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9Zm0 3.4C10.2 7.6 9 9.6 9 11a3 3 0 0 0 6 0c0-1.4-1.2-3.4-3-5.6Z"/><path fill="currentColor" d="M4 20c3-1.5 5.5-1.5 8-0-2.5-1.5-5-1.5-8 0Z"/></svg>
+            </span>
+            <h3>Au rythme des saisons</h3>
+            <p>On respecte le calendrier de la nature. Les variétés se succèdent au fil des mois, cueillies à maturité, choisies pour leur goût avant tout.</p>
+          </article>
+
+          <article class="bento__tile v-accueil" data-reveal>
+            <span class="tile__ico">
+              <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg>
+            </span>
+            <h3>Un accueil qui a du Sud</h3>
+            <p>On connaît nos habitués, on conseille, on prend le temps. Ici, on vient pour les produits et on revient pour le sourire.</p>
+          </article>
+
+          <article class="bento__tile bento__tile--accent v-stat" data-reveal>
+            <p class="stat__num">+15</p>
+            <p class="stat__label">années à régaler le quartier, 7 jours sur 7</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DE SAISON (ÉDITORIAL) ===================== -->
+    <section class="season" id="saison">
+      <div class="container">
+        <header class="section__head section__head--row" data-reveal>
+          <div>
+            <p class="eyebrow">Ce qu'on aime en ce moment</p>
+            <h2 class="section__title">Les trésors de juin</h2>
+          </div>
+          <p class="section__lead">L'étal se pare de couleurs. Voici ce qu'on vous conseille les yeux fermés, cueilli à maturité et choisi le matin même.</p>
+        </header>
+
+        <div class="season__grid">
+          <article class="season__card season__card--feature" data-reveal>
+            <div class="season__media">
+              <img src="images/fraises.jpg" loading="lazy" alt="Cagettes de fraises rouges et brillantes, gorgées de jus." />
+              <span class="heart" title="Notre coup de cœur" aria-label="Notre coup de cœur">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 21s-6.7-4.35-9.3-8.04C.86 10.2 1.7 6.6 5.1 6.04c2-.33 3.6 1 3.9 1.96.3-.96 1.9-2.29 3.9-1.96 3.4.56 4.24 4.16 2.4 6.92C18.7 16.65 12 21 12 21Z"/></svg>
+              </span>
+            </div>
+            <div class="season__body">
+              <span class="season__kicker">Coup de cœur</span>
+              <h3>Fraises &amp; cerises</h3>
+              <p>Sucrées, parfumées, le vrai goût du début d'été. À déguster nature, ou sur une tarte encore tiède.</p>
+            </div>
+          </article>
+
+          <article class="season__card" data-reveal>
+            <div class="season__media">
+              <img src="images/peches.jpg" loading="lazy" alt="Pêches et abricots mûrs aux teintes orangées." />
+            </div>
+            <div class="season__body">
+              <h3>Pêches &amp; abricots</h3>
+              <p>Juteux et fondants, l'essence de juillet en avance.</p>
+            </div>
+          </article>
+
+          <article class="season__card" data-reveal>
+            <div class="season__media">
+              <img src="images/tomates.jpg" loading="lazy" alt="Tomates anciennes charnues et artichauts violets." />
+            </div>
+            <div class="season__body">
+              <h3>Tomates de plein champ</h3>
+              <p>Anciennes, charnues. Un filet d'huile d'olive et c'est l'été.</p>
+            </div>
+          </article>
+
+          <article class="season__card" data-reveal>
+            <div class="season__media">
+              <img src="images/agrumes.jpg" loading="lazy" alt="Agrumes du soleil, citrons et oranges." />
+            </div>
+            <div class="season__body">
+              <h3>Fruits du soleil</h3>
+              <p>Melons parfumés et agrumes, à croquer dès le retour du marché.</p>
+            </div>
+          </article>
+
+          <article class="season__card" data-reveal>
+            <div class="season__media">
+              <img src="images/legumes.jpg" loading="lazy" alt="Étal de légumes de saison : courgettes, aubergines, poivrons." />
+            </div>
+            <div class="season__body">
+              <h3>Le panier du marché</h3>
+              <p>Courgettes, aubergines, poivrons, herbes fraîches. Tout pour une vraie ratatouille.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DEUX UNIVERS ===================== -->
+    <section class="duo" id="maison">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">La maison</p>
+          <h2 class="section__title">Deux univers, un même soin</h2>
+          <p class="section__lead">Le meilleur du frais et les belles choses de l'épicerie fine, réunis sous le même toit.</p>
+        </header>
+
+        <div class="duo__grid">
+          <article class="duo__card" data-reveal>
+            <div class="duo__media">
+              <img src="images/primeur.jpg" loading="lazy" alt="Grand étal de primeur coloré : rhubarbe, grenades, ananas, melons." />
+            </div>
+            <div class="duo__body">
+              <span class="duo__chip">Côté primeur</span>
+              <h3>Le frais, d'abord</h3>
+              <p>Des variétés qui se succèdent au fil des mois, choisies pour leur goût. Arrivages renouvelés chaque matin, conseils de préparation offerts avec le sourire.</p>
+              <ul class="ticklist">
+                <li>Arrivages renouvelés chaque matin</li>
+                <li>Producteurs de la région privilégiés</li>
+                <li>Conseils de saison et de préparation</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="duo__card" data-reveal>
+            <div class="duo__media">
+              <img src="images/epicerie.jpg" loading="lazy" alt="Rayon d'épicerie fine : huiles, conserves et bocaux du Sud." />
+            </div>
+            <div class="duo__body">
+              <span class="duo__chip">Côté épicerie fine</span>
+              <h3>Les belles choses</h3>
+              <p>À côté des étals, une sélection de produits d'exception pour prolonger le plaisir à table&nbsp;: huiles d'olive, tapenades, miels, fromages affinés et idées cadeaux.</p>
+              <ul class="ticklist">
+                <li>Huiles, tapenades &amp; condiments du Sud</li>
+                <li>Fromages, charcuteries &amp; douceurs</li>
+                <li>Paniers garnis sur demande</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CAVE À OLIVES ===================== -->
+    <section class="olives">
+      <div class="container">
+        <div class="olives__inner" data-reveal>
+          <div class="olives__media">
+            <img src="images/olives.jpg" loading="lazy" alt="Plateaux d'olives vertes, noires et marinées, devant les rayons de bocaux." />
+          </div>
+          <div class="olives__text">
+            <p class="eyebrow">La cave à olives</p>
+            <h2>Tout un monde d'olives</h2>
+            <p>Vertes, noires, cassées, à la grecque, piquantes ou marinées aux herbes de Provence. Une sélection généreuse où chaque variété a son caractère, toutes aussi savoureuses les unes que les autres.</p>
+            <p class="olives__note">Goûtez, comparez, repartez avec vos préférées.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCTEURS ===================== -->
+    <section class="growers" id="producteurs">
+      <div class="growers__media" aria-hidden="true"></div>
+      <div class="growers__veil" aria-hidden="true"></div>
+      <div class="container">
+        <div class="growers__inner" data-reveal>
+          <p class="eyebrow eyebrow--light">Nos producteurs</p>
+          <h2 class="growers__title">Derrière chaque cagette,<br>une terre et des mains</h2>
+          <p class="growers__lead">La plupart de nos fruits et légumes viennent d'à côté. Des maraîchers et des arboriculteurs de la région que l'on connaît, qui récoltent à maturité et nous livrent au plus près du moment où c'est bon. Pas d'intermédiaires inutiles&nbsp;: juste le chemin le plus court entre leur champ et votre table.</p>
+          <ul class="growers__points">
+            <li><strong>À deux pas</strong><span>Des récoltes de la région, livrées au plus frais</span></li>
+            <li><strong>À maturité</strong><span>Cueilli quand c'est bon, pas avant</span></li>
+            <li><strong>En confiance</strong><span>Des partenaires que l'on suit d'année en année</span></li>
           </ul>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="duo__card">
-        <div class="duo__gallery" data-gallery="epicerie" aria-label="Photos du rayon épicerie fine"><span class="duo__chip">Côté épicerie fine</span></div>
-        <div class="duo__body">
-          <h3>Les belles choses.</h3>
-          <p>À côté des étals, une sélection de produits d'exception pour prolonger le plaisir à table : huiles d'olive, tapenades, miels, fromages affinés, douceurs et idées cadeaux.</p>
-          <ul class="ticklist">
-            <li>Huiles, tapenades &amp; condiments du Sud</li>
-            <li>Fromages, charcuteries &amp; douceurs</li>
-            <li>Paniers garnis sur demande</li>
-          </ul>
+    <!-- ===================== AVIS CLIENTS ===================== -->
+    <section class="reviews" id="avis">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">On en parle dans le quartier</p>
+          <h2 class="section__title">Ils poussent la porte, ils reviennent</h2>
+          <p class="section__lead">Ce qu'on préfère, c'est quand vous repartez le panier plein et le sourire aux lèvres.</p>
+        </header>
+
+        <div class="reviews__grid">
+          <figure class="review" data-reveal>
+            <div class="review__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+            <blockquote>Le meilleur primeur du quartier, sans hésiter. Les fruits sont mûrs à point et l'accueil est toujours adorable. Je ne fais plus mes courses ailleurs.</blockquote>
+            <figcaption><span class="review__avatar">S</span><span><strong>Sophie M.</strong><em>Endoume</em></span></figcaption>
+          </figure>
+
+          <figure class="review" data-reveal>
+            <div class="review__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+            <blockquote>On sent que tout est choisi avec soin. Les tomates ont enfin le goût de mon enfance. Et la cave à olives vaut le détour à elle seule.</blockquote>
+            <figcaption><span class="review__avatar">K</span><span><strong>Karim B.</strong><em>Saint-Victor</em></span></figcaption>
+          </figure>
+
+          <figure class="review" data-reveal>
+            <div class="review__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+            <blockquote>Des produits frais, de saison, et des conseils qui font la différence en cuisine. Une vraie adresse de quartier comme on n'en trouve presque plus.</blockquote>
+            <figcaption><span class="review__avatar">L</span><span><strong>Lucie D.</strong><em>Le Roucas Blanc</em></span></figcaption>
+          </figure>
         </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===== CAVE A OLIVES ===== -->
-  <section class="olives" id="olives">
-    <div class="olives__inner">
-      <div class="olives__media" data-img="olives"></div>
-      <div class="olives__text">
-        <p class="eyebrow">La cave à olives</p>
-        <h2>Un large choix d'olives</h2>
-        <p>Vertes, noires, cassées, à la grecque, piquantes ou marinées aux herbes de Provence... une sélection généreuse où chaque variété a son caractère, toutes aussi savoureuses les unes que les autres.</p>
-        <p class="olives__note">Goûtez, comparez, repartez avec vos préférées.</p>
+        <p class="reviews__note" data-reveal>Avis représentatifs · <a href="https://www.google.com/maps?q=26+rue+d%27Endoume+13007+Marseille" target="_blank" rel="noopener">retrouvez-nous sur Google</a></p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== CIRCUIT COURT / PRODUCTEURS ===== -->
-  <section class="circuit" id="circuit">
-    <div class="circuit__inner">
-      <div class="circuit__text">
-        <p class="eyebrow">Le circuit court</p>
-        <h2>Nos producteurs, juste à côté</h2>
-        <p>Nous travaillons main dans la main avec de nombreux producteurs de la région. Des partenaires de confiance, des récoltes locales et le moins d'intermédiaires possible : c'est ça, le circuit court. Vous y gagnez en fraîcheur et en goût, tout en soutenant l'agriculture d'ici.</p>
-        <ul class="ticklist">
-          <li>De nombreux partenaires locaux</li>
-          <li>Le moins d'intermédiaires possible</li>
-          <li>Des produits cueillis à maturité</li>
-        </ul>
-      </div>
-      <div class="circuit__media" data-img="producteurs"></div>
-    </div>
-  </section>
-
-  <!-- ===== LE LIEU ===== -->
-  <section class="lieu" id="lieu">
-    <div class="lieu__media" data-img="devanture"></div>
-    <div class="lieu__veil"></div>
-    <div class="lieu__content">
-      <p class="eyebrow eyebrow--light">Au cœur d'Endoume</p>
-      <h2 class="lieu__title">Une adresse de quartier,<br>un accueil toujours souriant.</h2>
-      <p>Depuis plus de 15 ans, au 26 rue d'Endoume, on pousse la porte et on retrouve l'ambiance d'un vrai marché provençal : des couleurs chatoyantes, une odeur de fruits mûrs le long des allées, et le sourire de ceux qui aiment ce qu'ils vendent. On vient pour les produits, on revient pour l'accueil.</p>
-      <div class="lieu__stats">
-        <div><strong>+15 ans</strong><span>D'expérience</span></div>
-        <div><strong>7j/7</strong><span>Toujours ouvert</span></div>
-        <div><strong>7h–20h30</strong><span>Du matin au soir</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== LIVRAISON ===== -->
-  <section class="livraison" id="livraison">
-    <div class="livraison__inner">
-      <div class="livraison__text">
-        <span class="livraison__kicker">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 5h11a1 1 0 0 1 1 1v8h2.6l2.4-3.2V14h.5a.5.5 0 0 1 .5.5V17h-2.1a2.5 2.5 0 0 1-4.8 0H9.9a2.5 2.5 0 0 1-4.8 0H3V5Zm4 11.5A.5.5 0 1 0 7 17a.5.5 0 0 0 0-1Zm9 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Z"/></svg>
-          On vient à vous
-        </span>
-        <h2>Pas le temps de passer&nbsp;?<br>On vous livre à domicile.</h2>
-        <p>Livraison sur Marseille : composez votre panier par téléphone, on prépare tout et on s'occupe du reste. Le marché, sans bouger de chez vous.</p>
-        <a href="tel:+33491338568" class="btn btn--light">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
-          Commander par téléphone
-        </a>
-      </div>
-      <div class="livraison__visual">
-        <div class="livraison__media" data-img="livraison"></div>
-        <span class="livraison__badge">
-          <strong>04 91 33 85 68</strong>
-          <span>Appelez avant 12h</span>
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== INFOS PRATIQUES ===== -->
-  <section class="infos" id="infos">
-    <div class="infos__grid">
-      <div class="infos__panel">
-        <p class="eyebrow">Nous trouver</p>
-        <h2 class="section__title">Passez quand vous voulez</h2>
-        <p class="section__lead">On vous attend au cœur d'Endoume. Garez-vous, montez, et laissez-vous tenter.</p>
-
-        <div class="infoblock">
-          <div class="infoblock__icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+    <!-- ===================== LIVRAISON ===================== -->
+    <section class="delivery">
+      <div class="container">
+        <div class="delivery__inner" data-reveal>
+          <div class="delivery__text">
+            <span class="delivery__kicker">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 5h11a1 1 0 0 1 1 1v8h2.6l2.4-3.2V14h.5a.5.5 0 0 1 .5.5V17h-2.1a2.5 2.5 0 0 1-4.8 0H9.9a2.5 2.5 0 0 1-4.8 0H3V5Zm4 11.5A.5.5 0 1 0 7 17a.5.5 0 0 0 0-1Zm9 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Z"/></svg>
+              On vient à vous
+            </span>
+            <h2>Pas le temps de passer&nbsp;?<br>On vous livre à domicile.</h2>
+            <p>Livraison sur Marseille&nbsp;: composez votre panier par téléphone, on prépare tout et on s'occupe du reste. Le marché, sans bouger de chez vous.</p>
+            <a href="tel:+33491338568" class="btn btn--primary">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
+              Commander par téléphone
+            </a>
           </div>
-          <div>
-            <h3>Adresse</h3>
-            <p>26 rue d'Endoume<br>13007 Marseille</p>
+          <div class="delivery__visual">
+            <img src="images/livraison.jpg" loading="lazy" alt="Panier de fruits et légumes frais prêt pour la livraison." />
+            <span class="delivery__badge">
+              <strong>04 91 33 85 68</strong>
+              <span>Appelez avant 12h</span>
+            </span>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="infoblock">
-          <div class="infoblock__icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
-          </div>
-          <div>
-            <h3>Téléphone</h3>
-            <p><a href="tel:+33491338568">04 91 33 85 68</a></p>
-          </div>
-        </div>
+    <!-- ===================== MAGASIN / INFOS ===================== -->
+    <section class="visit" id="magasin">
+      <div class="container">
+        <div class="visit__grid">
+          <div class="visit__panel" data-reveal>
+            <p class="eyebrow">Nous trouver</p>
+            <h2 class="section__title">Passez quand vous voulez</h2>
+            <p class="section__lead">On vous attend au cœur d'Endoume. Poussez la porte, et laissez-vous tenter.</p>
 
-        <div class="infoblock">
-          <div class="infoblock__icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 10.6 4 2.3-1 1.7-5-2.9V6h2v6.6Z"/></svg>
-          </div>
-          <div>
-            <h3>Horaires</h3>
-            <p>Tous les jours · 7h00 – 20h30</p>
-            <p class="infos__status"><span class="dot" id="openDotInfos"></span><span id="openStatusInfos">Ouvert 7j/7</span></p>
-          </div>
-        </div>
+            <ul class="visit__list">
+              <li>
+                <span class="visit__ico">
+                  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                </span>
+                <span><strong>Adresse</strong>26 rue d'Endoume, 13007 Marseille</span>
+              </li>
+              <li>
+                <span class="visit__ico">
+                  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
+                </span>
+                <span><strong>Téléphone</strong><a href="tel:+33491338568">04 91 33 85 68</a></span>
+              </li>
+              <li>
+                <span class="visit__ico">
+                  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 10.6 4 2.3-1 1.7-5-2.9V6h2v6.6Z"/></svg>
+                </span>
+                <span><strong>Horaires</strong>Tous les jours · 7h00 – 20h30
+                  <span class="visit__status"><span class="dot" id="openDotInfos" aria-hidden="true"></span><span id="openStatusInfos">Ouvert 7j/7</span></span>
+                </span>
+              </li>
+            </ul>
 
-        <div class="infos__actions">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=26+rue+d%27Endoume+13007+Marseille" target="_blank" rel="noopener" class="btn btn--primary">Itinéraire</a>
-          <a href="tel:+33491338568" class="btn btn--outline">Appeler</a>
+            <div class="visit__actions">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=26+rue+d%27Endoume+13007+Marseille" target="_blank" rel="noopener" class="btn btn--primary">Itinéraire</a>
+              <a href="tel:+33491338568" class="btn btn--outline">Appeler</a>
+            </div>
+          </div>
+
+          <div class="visit__map" data-reveal>
+            <div class="visit__map-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+              <span>26 rue d'Endoume<br>13007 Marseille</span>
+            </div>
+            <iframe
+              title="Plan d'accès — Terre de Provence, 26 rue d'Endoume, Marseille"
+              src="https://www.google.com/maps?q=26+rue+d%27Endoume+13007+Marseille&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="infos__map">
-        <iframe
-          title="Plan d'accès Terre de Provence, 26 rue d'Endoume, Marseille"
-          src="https://www.google.com/maps?q=26+rue+d%27Endoume+13007+Marseille&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="footer__inner">
+    <div class="container footer__inner">
       <div class="footer__brand">
-        <svg class="brand__basket brand__basket--lg" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <path d="M12 20a8 8 0 0 1 16 0" stroke="#e0b06a" stroke-width="2"/>
-          <circle cx="14" cy="17.4" r="3.6" fill="#e2613f"/>
-          <circle cx="26" cy="17.4" r="3.9" fill="#f2a838"/>
-          <circle cx="20" cy="16.2" r="3.2" fill="#9ccb54"/>
-          <path d="M20 12.8c.8-2 3-2.4 4.2-1.7-.6 2-2.8 2.5-4.2 1.7Z" fill="#8cc24f"/>
-          <rect x="6.5" y="19" width="27" height="3.7" rx="1.85" fill="#e0b06a"/>
-          <path d="M8.6 22.7h22.8l-1.8 8.9a2.2 2.2 0 0 1-2.16 1.76H12.56a2.2 2.2 0 0 1-2.16-1.76L8.6 22.7Z" fill="#dcab63"/>
-          <path d="M14.6 24.2l-.4 6.5M20 24.2v6.7M25.4 24.2l.4 6.5" stroke="#b9863a" stroke-width="1" opacity=".55"/>
-          <path d="M11.4 27.6h17.2" stroke="#b9863a" stroke-width="1" opacity=".45"/>
-        </svg>
-        <p>Terre de Pr<svg class="brand__cit" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="11" r="7.4" fill="#f2a838"/><path d="M10 4.2c.5-2 2.3-2.7 3.8-2.1-.3 1.8-2 2.7-3.8 2.1Z" fill="#8cc24f"/><circle cx="7.5" cy="8.8" r="1.5" fill="#fff" opacity=".4"/></svg><span class="sr-only">o</span>vence<br><span>Primeur &amp; Épicerie fine · Endoume</span></p>
+        <img src="images/logo.jpg" width="64" height="64" alt="" />
+        <p class="footer__name">Terre de Provence</p>
+        <p class="footer__tag">Primeur &amp; épicerie fine au cœur d'Endoume — Saint-Victor, Marseille 7<sup>e</sup>.</p>
       </div>
       <div class="footer__col">
         <h4>La maison</h4>
         <a href="#saison">Produits de saison</a>
-        <a href="#univers">Primeur &amp; épicerie</a>
-        <a href="#lieu">Le lieu</a>
+        <a href="#maison">Primeur &amp; épicerie</a>
+        <a href="#producteurs">Nos producteurs</a>
+        <a href="#avis">Avis</a>
       </div>
       <div class="footer__col">
         <h4>Nous trouver</h4>
@@ -392,15 +468,16 @@
       <div class="footer__col">
         <h4>Horaires</h4>
         <p>Tous les jours<br>7h00 – 20h30</p>
+        <p class="footer__small">Ouvert 7 jours sur 7</p>
       </div>
     </div>
-    <div class="footer__base">
+    <div class="container footer__base">
       <span>© <span id="year"></span> Terre de Provence — Marseille 7<sup>e</sup></span>
       <span>Fait avec soin, comme nos étals.</span>
     </div>
   </footer>
 
-  <!-- ===== CTA FLOTTANT MOBILE ===== -->
+  <!-- CTA flottant mobile -->
   <a href="tel:+33491338568" class="fab" aria-label="Appeler la boutique">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
   </a>
