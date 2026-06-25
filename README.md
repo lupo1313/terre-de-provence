@@ -29,6 +29,8 @@ Toutes les images sont de vraies photos du magasin, rangées dans `images/`. Le 
 | ↳ au survol                        | `legumes`  | `images/legumes-2.jpg`|
 | Section « Le frais, d'abord »      | `primeur`  | `images/primeur.jpg`  |
 | Section « Les belles choses »      | `epicerie` | `images/epicerie.jpg` |
+| Section « La cave à olives »       | `olives`   | `images/olives.jpg`   |
+| Section « Le circuit court »       | `producteurs`| `images/producteurs.webp` |
 | Bandeau « Au cœur d'Endoume »      | `devanture`| `images/lieu.jpg`     |
 
 Pour changer une image : remplace le fichier dans `images/` (même nom), ou modifie le chemin dans `IMAGES` / `HOVER` au début de `script.js`. Si une image manque, un fond coloré chaleureux reste affiché (le site ne casse jamais).

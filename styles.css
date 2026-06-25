@@ -436,9 +436,90 @@ section{ position:relative; }
 .reveal.is-in{ opacity:1; transform:none; }
 
 /* =========================================================
+   PERKS (bande avantages)
+   ========================================================= */
+.perks{ background:var(--cream); padding:56px 0; border-bottom:1px solid rgba(91,107,58,.12); }
+.perks__grid{
+  max-width:var(--maxw); margin:0 auto; padding:0 24px;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:30px;
+}
+.perk__ico{
+  display:inline-flex; width:52px; height:52px; border-radius:14px;
+  background:var(--olive); color:var(--cream);
+  align-items:center; justify-content:center; margin-bottom:14px;
+}
+.perk h3{ font-family:var(--serif); font-weight:500; font-size:1.2rem; margin-bottom:.3rem; }
+.perk p{ color:var(--ink-soft); font-size:.92rem; max-width:30ch; }
+
+/* =========================================================
+   OLIVES
+   ========================================================= */
+.olives{ background:var(--sand); padding:90px 0; }
+.olives__inner{
+  max-width:var(--maxw); margin:0 auto; padding:0 24px;
+  display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;
+}
+.olives__media{
+  height:420px; border-radius:var(--radius); overflow:hidden;
+  background-size:cover; background-position:center 70%;
+  box-shadow:var(--shadow); background-color:var(--olive-deep);
+}
+.olives__text h2{
+  font-family:var(--serif); font-weight:500;
+  font-size:clamp(2rem,4.5vw,3rem); line-height:1.05; letter-spacing:-.01em;
+  margin-bottom:1.1rem;
+}
+.olives__text p{ color:var(--ink-soft); font-size:1.05rem; margin-bottom:1rem; }
+.olives__note{ font-family:var(--serif); font-style:italic; color:var(--terracotta); font-size:1.2rem; }
+
+/* =========================================================
+   CIRCUIT COURT
+   ========================================================= */
+.circuit{ background:var(--cream); padding:90px 0; }
+.circuit__inner{
+  max-width:var(--maxw); margin:0 auto; padding:0 24px;
+  display:grid; grid-template-columns:1fr 1.05fr; gap:56px; align-items:center;
+}
+.circuit__media{
+  height:440px; border-radius:var(--radius); overflow:hidden;
+  background-size:cover; background-position:center;
+  box-shadow:var(--shadow); background-color:var(--olive);
+}
+.circuit__text h2{
+  font-family:var(--serif); font-weight:500;
+  font-size:clamp(2rem,4.5vw,3rem); line-height:1.05; letter-spacing:-.01em;
+  margin-bottom:1.1rem;
+}
+.circuit__text p{ color:var(--ink-soft); font-size:1.05rem; margin-bottom:1.4rem; }
+
+/* =========================================================
+   LIVRAISON (bande CTA)
+   ========================================================= */
+.livraison{ background:var(--terracotta); color:#fff; padding:62px 0; }
+.livraison__inner{
+  max-width:var(--maxw); margin:0 auto; padding:0 24px;
+  display:flex; align-items:center; justify-content:space-between; gap:36px; flex-wrap:wrap;
+}
+.livraison__text{ max-width:640px; }
+.livraison .eyebrow--light{ color:#ffe1c2; }
+.livraison__text h2{
+  font-family:var(--serif); font-weight:500;
+  font-size:clamp(1.8rem,4vw,2.6rem); line-height:1.06; margin-bottom:.6rem;
+}
+.livraison__text p{ color:rgba(255,255,255,.92); font-size:1.05rem; }
+.btn--light{ background:#fff; color:var(--terracotta-2); box-shadow:0 14px 30px -14px rgba(0,0,0,.5); }
+.btn--light:hover{ background:var(--cream); transform:translateY(-2px); }
+
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 @media (max-width:920px){
+  .perks__grid{ grid-template-columns:1fr 1fr; gap:26px; }
+  .olives__inner,
+  .circuit__inner{ grid-template-columns:1fr; gap:28px; }
+  .olives__media{ height:300px; }
+  .circuit__media{ height:300px; }
+  .livraison__inner{ flex-direction:column; align-items:flex-start; gap:22px; }
   .nav__links{ display:none; }
   .saison__grid{ grid-template-columns:1fr 1fr; grid-auto-rows:260px; }
   .prod--tall{ grid-row:span 1; }
@@ -451,6 +532,7 @@ section{ position:relative; }
   .footer__inner{ grid-template-columns:1fr 1fr; gap:32px; }
 }
 @media (max-width:560px){
+  .perks__grid{ grid-template-columns:1fr; gap:22px; }
   .nav__cta span{ display:none; }
   .nav__cta{ padding:.6rem .75rem; }
   .saison__grid{ grid-template-columns:1fr; grid-auto-rows:240px; }
