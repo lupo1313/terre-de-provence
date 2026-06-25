@@ -18,6 +18,7 @@ const IMAGES = {
   epicerie:  "images/epicerie.jpg",     // rayons épicerie fine
   olives:    "images/olives.jpg",       // rayon olives
   producteurs:"images/producteurs.webp",// cagette / circuit court
+  livraison: "images/livraison.jpg",    // panier livré (section livraison)
   devanture: "images/lieu.jpg"          // étal coloré (section "Le lieu")
 };
 
@@ -62,7 +63,7 @@ onScroll();
 
 /* ---------- Reveal au scroll ---------- */
 const revealTargets = [
-  ".section__head", ".prod", ".univers__col", ".lieu__content",
+  ".section__head", ".prod", ".duo__card", ".lieu__content",
   ".infos__panel", ".infos__map", ".footer__inner",
   ".perk", ".olives__inner", ".circuit__inner", ".livraison__inner"
 ];
