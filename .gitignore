@@ -1,0 +1,13 @@
+# Ne versionner que le site déployable.
+# Tout est ignoré par défaut, puis on ré-inclut le nécessaire.
+/*
+
+!.gitignore
+!index.html
+!styles.css
+!script.js
+!README.md
+!images/
+
+# (Le dossier "vrai fruits et legumes/" et les images en vrac à la racine
+#  restent en local mais ne sont pas envoyés sur GitHub.)

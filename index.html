@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terre de Provence — Primeur & Épicerie fine | Endoume, Marseille 7e</title>
+  <meta name="description" content="Terre de Provence, votre primeur et épicerie fine au cœur d'Endoume, 26 rue d'Endoume, Marseille 7e. Fruits et légumes gorgés de soleil, produits de saison, ouvert 7j/7 de 7h à 20h30." />
+
+  <!-- SEO local -->
+  <meta property="og:title" content="Terre de Provence — Primeur & Épicerie fine à Endoume" />
+  <meta property="og:description" content="Fruits et légumes de saison, gorgés de soleil. Au cœur du quartier d'Endoume, Marseille 7e. Ouvert 7j/7." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Données structurées pour Google (référencement local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GroceryStore",
+    "name": "Terre de Provence",
+    "image": "",
+    "description": "Primeur et épicerie fine au cœur du quartier d'Endoume. Fruits et légumes de saison, gorgés de soleil.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "26 rue d'Endoume",
+      "addressLocality": "Marseille",
+      "postalCode": "13007",
+      "addressRegion": "Provence-Alpes-Côte d'Azur",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33491338568",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "07:00",
+      "closes": "20:30"
+    }]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="brand">
+        <span class="brand__mark">T<span class="brand__dot">d</span>P</span>
+        <span class="brand__name">Terre de Provence</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#saison">De saison</a>
+        <a href="#univers">La maison</a>
+        <a href="#lieu">Le lieu</a>
+        <a href="#infos">Nous trouver</a>
+      </nav>
+      <a href="tel:+33491338568" class="nav__cta">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
+        <span>04 91 33 85 68</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__media" data-img="market"></div>
+    <div class="hero__veil"></div>
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--light">Primeur &amp; Épicerie fine · Endoume, Marseille 7<sup>e</sup></p>
+      <h1 class="hero__title">Le bon goût du<br><em>Sud</em>, chaque matin.</h1>
+      <p class="hero__sub">Fruits et légumes gorgés de soleil, choisis avec soin et renouvelés au fil des saisons. Une adresse de quartier où l'on prend le temps de bien faire.</p>
+      <div class="hero__actions">
+        <a href="#infos" class="btn btn--primary">Venir nous voir</a>
+        <a href="tel:+33491338568" class="btn btn--ghost">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
+          Appeler la boutique
+        </a>
+      </div>
+      <div class="hero__badge">
+        <span class="dot dot--open" id="openDot"></span>
+        <span id="openStatus">Ouvert aujourd'hui · 7h – 20h30</span>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Découvrir</span>
+      <span class="hero__scrollline"></span>
+    </div>
+  </section>
+
+  <!-- ===== BANDEAU DEFILANT ===== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Fraises de Carpentras</span><span>•</span>
+      <span>Cerises</span><span>•</span>
+      <span>Pêches &amp; abricots</span><span>•</span>
+      <span>Tomates de plein champ</span><span>•</span>
+      <span>Melon de Provence</span><span>•</span>
+      <span>Huile d'olive AOP</span><span>•</span>
+      <span>Fromages affinés</span><span>•</span>
+      <span>Fraises de Carpentras</span><span>•</span>
+      <span>Cerises</span><span>•</span>
+      <span>Pêches &amp; abricots</span><span>•</span>
+      <span>Tomates de plein champ</span><span>•</span>
+      <span>Melon de Provence</span><span>•</span>
+      <span>Huile d'olive AOP</span><span>•</span>
+      <span>Fromages affinés</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- ===== DE SAISON ===== -->
+  <section class="saison" id="saison">
+    <div class="section__head">
+      <p class="eyebrow">Ce qu'on aime en ce moment</p>
+      <h2 class="section__title">Les stars de la saison</h2>
+      <p class="section__lead">En juin, l'étal se pare de couleurs. Voici ce qu'on vous conseille les yeux fermés, cueilli à maturité et choisi le matin même.</p>
+    </div>
+
+    <div class="saison__grid">
+      <article class="prod prod--tall">
+        <div class="prod__img" data-img="fraises"></div>
+        <div class="prod__body">
+          <span class="prod__tag">Le coup de cœur</span>
+          <h3>Fraises &amp; cerises</h3>
+          <p>Sucrées, parfumées, le vrai goût du début d'été. À déguster nature ou sur une tarte maison.</p>
+        </div>
+      </article>
+
+      <article class="prod">
+        <div class="prod__img" data-img="peches"></div>
+        <div class="prod__body">
+          <h3>Pêches &amp; abricots</h3>
+          <p>Juteux et fondants, l'essence de juillet en avance.</p>
+        </div>
+      </article>
+
+      <article class="prod">
+        <div class="prod__img" data-img="tomates"></div>
+        <div class="prod__body">
+          <h3>Tomates de plein champ</h3>
+          <p>Anciennes, charnues, gorgées de soleil. Un filet d'huile d'olive et c'est l'été.</p>
+        </div>
+      </article>
+
+      <article class="prod prod--wide">
+        <div class="prod__img" data-img="legumes"></div>
+        <div class="prod__body">
+          <h3>Le panier du marché</h3>
+          <p>Courgettes, aubergines, poivrons, herbes fraîches. Tout pour une ratatouille comme à la maison.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== UNIVERS : PRIMEUR + EPICERIE FINE ===== -->
+  <section class="univers" id="univers">
+    <div class="univers__col">
+      <div class="univers__media" data-img="primeur"></div>
+      <div class="univers__text">
+        <p class="eyebrow">Le primeur</p>
+        <h2>Le frais, d'abord.</h2>
+        <p>Chaque saison a ses trésors et nous les suivons au plus près. Des variétés qui se succèdent au fil des mois, choisies pour leur goût avant tout. Ici la nature n'est pas contrariée : on respecte le rythme des récoltes.</p>
+        <ul class="ticklist">
+          <li>Arrivages renouvelés chaque matin</li>
+          <li>Producteurs de la région privilégiés</li>
+          <li>Conseils de saison et de préparation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="univers__col univers__col--reverse">
+      <div class="univers__media" data-img="epicerie"></div>
+      <div class="univers__text">
+        <p class="eyebrow">L'épicerie fine</p>
+        <h2>Les belles choses.</h2>
+        <p>À côté des étals, une sélection de produits d'exception pour prolonger le plaisir à table. Huiles d'olive, tapenades, miels, fromages affinés, douceurs et idées cadeaux. De quoi composer un panier qui fait toujours plaisir.</p>
+        <ul class="ticklist">
+          <li>Huiles, tapenades &amp; condiments du Sud</li>
+          <li>Fromages, charcuteries &amp; douceurs</li>
+          <li>Paniers garnis sur demande</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LE LIEU ===== -->
+  <section class="lieu" id="lieu">
+    <div class="lieu__media" data-img="devanture"></div>
+    <div class="lieu__veil"></div>
+    <div class="lieu__content">
+      <p class="eyebrow eyebrow--light">Au cœur d'Endoume</p>
+      <h2 class="lieu__title">Une adresse de quartier,<br>un accueil toujours souriant.</h2>
+      <p>Au 26 rue d'Endoume, on pousse la porte et on retrouve l'ambiance d'un vrai marché provençal : des couleurs chatoyantes, une odeur de fruits mûrs le long des allées, et le sourire de ceux qui aiment ce qu'ils vendent. On vient pour les produits, on revient pour l'accueil.</p>
+      <div class="lieu__stats">
+        <div><strong>7j/7</strong><span>Toujours ouvert</span></div>
+        <div><strong>7h–20h30</strong><span>Du matin au soir</span></div>
+        <div><strong>13007</strong><span>Quartier Endoume</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INFOS PRATIQUES ===== -->
+  <section class="infos" id="infos">
+    <div class="infos__grid">
+      <div class="infos__panel">
+        <p class="eyebrow">Nous trouver</p>
+        <h2 class="section__title">Passez quand vous voulez</h2>
+        <p class="section__lead">On vous attend au cœur d'Endoume. Garez-vous, montez, et laissez-vous tenter.</p>
+
+        <div class="infoblock">
+          <div class="infoblock__icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+          </div>
+          <div>
+            <h3>Adresse</h3>
+            <p>26 rue d'Endoume<br>13007 Marseille</p>
+          </div>
+        </div>
+
+        <div class="infoblock">
+          <div class="infoblock__icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
+          </div>
+          <div>
+            <h3>Téléphone</h3>
+            <p><a href="tel:+33491338568">04 91 33 85 68</a></p>
+          </div>
+        </div>
+
+        <div class="infoblock">
+          <div class="infoblock__icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 10.6 4 2.3-1 1.7-5-2.9V6h2v6.6Z"/></svg>
+          </div>
+          <div>
+            <h3>Horaires</h3>
+            <p>Tous les jours · 7h00 – 20h30</p>
+          </div>
+        </div>
+
+        <div class="infos__actions">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=26+rue+d%27Endoume+13007+Marseille" target="_blank" rel="noopener" class="btn btn--primary">Itinéraire</a>
+          <a href="tel:+33491338568" class="btn btn--outline">Appeler</a>
+        </div>
+      </div>
+
+      <div class="infos__map">
+        <iframe
+          title="Plan d'accès Terre de Provence, 26 rue d'Endoume, Marseille"
+          src="https://www.google.com/maps?q=26+rue+d%27Endoume+13007+Marseille&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--lg">T<span class="brand__dot">d</span>P</span>
+        <p>Terre de Provence<br><span>Primeur &amp; Épicerie fine · Endoume</span></p>
+      </div>
+      <div class="footer__col">
+        <h4>La maison</h4>
+        <a href="#saison">Produits de saison</a>
+        <a href="#univers">Primeur &amp; épicerie</a>
+        <a href="#lieu">Le lieu</a>
+      </div>
+      <div class="footer__col">
+        <h4>Nous trouver</h4>
+        <p>26 rue d'Endoume<br>13007 Marseille</p>
+        <a href="tel:+33491338568">04 91 33 85 68</a>
+      </div>
+      <div class="footer__col">
+        <h4>Horaires</h4>
+        <p>Tous les jours<br>7h00 – 20h30</p>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© <span id="year"></span> Terre de Provence — Marseille 7<sup>e</sup></span>
+      <span>Fait avec soin, comme nos étals.</span>
+    </div>
+  </footer>
+
+  <!-- ===== CTA FLOTTANT MOBILE ===== -->
+  <a href="tel:+33491338568" class="fab" aria-label="Appeler la boutique">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
